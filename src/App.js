@@ -1,12 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+class App extends React.Component {
+  state = {
+    isLoading: true,
+    movies: [],
+  };
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, 4000)
+  }
+  render() {
+    const { isLoading } = this.state;
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+    return (
+      <div className="App">
+        {/* { this.state.isLoading ? "Loading" : "We Are Ready" } */}
+    
+        { isLoading ? "Loading" : "We Are Ready" }
+      </div>
+    )
+  }
 }
 
 export default App;
