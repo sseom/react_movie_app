@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Movie from '../component/Movie';
+import Movie from '../components/Movie';
 import './Home.css';
 
 // state를 이용하기 위해서 className component를 사용
