@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
+import Detail from "./routes/Detail";
 import Navigation from "./components/Navigation";
 import './App.css';
 
@@ -13,8 +14,9 @@ function App() {
       <Navigation /> 
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/movie/:id" component={Detail} />
     </HashRouter>
-    
+
     /* 
       BrowserRouter VS HashRouter
       별차이 없음 단 /#/ 해시태그의 차이가 있고 gh-pages에 설정하기 복잡함
